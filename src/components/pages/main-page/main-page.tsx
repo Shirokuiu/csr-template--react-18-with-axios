@@ -5,9 +5,10 @@ import 'src/components/pages/main-page/main-page.css';
 import logo from 'src/assets/img/logo.svg';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { clearState } from 'src/store/main-page-process/reducer/main-page-process';
+import { getTitle } from 'src/store/main-page-process/selectors';
 
 function MainPage() {
-  const title = useAppSelector((state) => state.MAIN_PAGE.title);
+  const title = useAppSelector(getTitle);
   const dispatch = useAppDispatch();
 
   const handleButtonClick = () => {
