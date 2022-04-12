@@ -7,9 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from 'src/components/pages/app/App';
 import { NameSpace } from 'src/store/constants';
+import { api } from 'src/store';
 
 describe('Проверка компонента App', () => {
-  const middlewares = [thunk.withExtraArgument('')];
+  const middlewares = [thunk.withExtraArgument(api)];
   const mockStore = configureMockStore(middlewares);
 
   describe('Проверка отрисовки', () => {
