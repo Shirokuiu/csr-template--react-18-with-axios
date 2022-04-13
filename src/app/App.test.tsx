@@ -5,7 +5,7 @@ import { configureMockStore } from '@jedmao/redux-mock-store';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from 'src/components/pages/app/App';
+import App from 'src/app/App';
 import { NameSpace } from 'src/store/constants';
 import { api } from 'src/store';
 
