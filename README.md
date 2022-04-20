@@ -1,4 +1,4 @@
-# Getting Started with Create React App (support - typescript, react router v6, redux, axios, reselect, prettier, sass)
+# Getting Started with Create React App (support - typescript, react router v6, redux, axios, reselect, prettier, sass, normalize.css)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
