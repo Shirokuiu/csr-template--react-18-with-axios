@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import 'src/components/pages/main-page/main-page.css';
+import 'src/components/pages/main-page/main-page.scss';
 import logo from 'src/assets/img/logo.svg';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { clearState } from 'src/store/main-page-process/reducer/main-page-process';
