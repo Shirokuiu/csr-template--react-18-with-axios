@@ -1,0 +1,19 @@
+node_modules
+
+# Ignore artifacts:
+build
+coverage
+
+src/assets/js
+src/assets/sprites/_sprite.svg
+src/index.html
+
+*.scss
+*.css
+.eslintrc.json
+.prettierrc
+package-lock.json
+package.json
+public
+README.md
+tsconfig.json
