@@ -18,7 +18,7 @@
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .tsx --ext .ts src/",
-    "lint:style": "stylelint --fix \"src/**/*.scss\" --custom-syntax postcss-scss",
+    "lint:style": "stylelint --fix \"src/**/*.scss\" --syntax=scss -q",
     "prettier": "npx prettier --write .",
     "prepare": "husky install"
   },
