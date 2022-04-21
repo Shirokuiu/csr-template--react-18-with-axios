@@ -8,9 +8,7 @@ export const createAPI = (): AxiosInstance => {
     timeout: REQUEST_TIMEOUT,
   });
 
-  api.interceptors.request.use((config: AxiosRequestConfig) => {
-    return config;
-  });
+  api.interceptors.request.use((config: AxiosRequestConfig) => config);
 
   api.interceptors.response.use(
     (response) => response,
@@ -21,8 +19,10 @@ export const createAPI = (): AxiosInstance => {
 
       switch (status) {
         case APIErrorCode.Unauthorized:
+          // eslint-disable-next-line no-console
           console.error(err);
           break;
+        default:
       }
 
       return Promise.reject(err);
