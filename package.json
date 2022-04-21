@@ -17,7 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .tsx --ext .ts src/"
+    "lint": "eslint --ext .tsx --ext .ts src/",
+    "prettier": "npx prettier --write ."
   },
   "browserslist": {
     "production": [
