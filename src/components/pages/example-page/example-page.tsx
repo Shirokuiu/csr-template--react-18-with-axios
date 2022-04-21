@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 
 function ExamplePage() {
-  if (true) {
-    useEffect(() => {}, []);
-  }
-
   return (
     <>
       <h1>Hello</h1>
