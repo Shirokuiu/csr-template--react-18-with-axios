@@ -21,6 +21,10 @@
   "plugins": ["react", "@typescript-eslint", "react-hooks"],
   "rules": {
     "no-console": "error",
+    "react/jsx-key": [
+      "error",
+      { "checkFragmentShorthand": true, "checkKeyMustBeforeSpread": true, "warnOnDuplicates": true }
+    ],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/react-in-jsx-scope": "off",
