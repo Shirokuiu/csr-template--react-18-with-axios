@@ -26,6 +26,7 @@
       { "checkFragmentShorthand": true, "checkKeyMustBeforeSpread": true, "warnOnDuplicates": true }
     ],
     "no-use-before-define": "off",
+    "react/jsx-props-no-spreading": "warn",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
