@@ -70,6 +70,6 @@
   },
   "lint-staged": {
     "*.{tsx,ts}": "eslint --fix",
-    "*.scss": "stylelint --syntax=scss --fix"
+    "*.scss": "stylelint --fix \"src/**/*.scss\" --syntax=scss -q"
   }
 }
