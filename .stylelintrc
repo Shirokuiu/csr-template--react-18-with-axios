@@ -3,6 +3,7 @@
     "stylelint-order",
     "stylelint-declaration-use-variable"
   ],
+  "ignoreFiles": ["src/assets/styles/typography.scss"],
   "customSyntax": "postcss-scss",
   "rules": {
     #,, Проверка очередности в контексте селектора

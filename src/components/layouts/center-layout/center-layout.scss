@@ -1,0 +1,11 @@
+@import 'src/assets/styles/variables';
+
+.center-layout {
+  max-width: 1830px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: $screenMobile) {
+    padding: 0 10px;
+  }
+}

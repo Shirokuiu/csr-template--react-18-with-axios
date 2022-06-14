@@ -1,8 +1,8 @@
-import React from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-import 'src/components/pages/main-page/main-page.scss';
-import logo from 'src/assets/img/logo.svg';
+import CenterLayout from 'src/components/layouts/center-layout/center-layout';
+import PageLayout from 'src/components/layouts/page-layout/page-layout';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { clearState } from 'src/store/main-page-process/reducer/main-page-process';
 import { getTitle } from 'src/store/main-page-process/selectors';
@@ -16,26 +16,29 @@ function MainPage() {
   };
 
   return (
-    <div className="main-page">
-      <header className="main-page__header">
-        <img src={logo} className="main-page__logo" alt="logo" />
-        <p>{title}</p>
-        <a
-          className="main-page__link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link to="example" className="main-page__link">
-          Go to example page
-        </Link>
-        <button type="button" onClick={handleButtonClick}>
-          Clear state
-        </button>
-      </header>
-    </div>
+    <HelmetProvider>
+      <PageLayout renderFooter={() => <h2>Hello from footer content</h2>}>
+        <Helmet>
+          <title>Index page</title>
+        </Helmet>
+        <CenterLayout>
+          <ul>
+            <li>
+              <h1>Hello</h1>
+            </li>
+            <li>
+              <Link to="test-page">Test page</Link>
+            </li>
+            <li>{title}</li>
+            <li>
+              <button type="button" onClick={handleButtonClick}>
+                Reset state
+              </button>
+            </li>
+          </ul>
+        </CenterLayout>
+      </PageLayout>
+    </HelmetProvider>
   );
 }
 

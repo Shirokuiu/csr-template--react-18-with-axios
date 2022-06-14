@@ -1,0 +1,97 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  @include reset;
+  list-style: none;
+}
+
+@mixin reset-button {
+  @include reset;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+@mixin reset-input {
+  @include reset;
+  @include reset-button;
+  display: block;
+  width: 100%;
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%); // stylelint-disable-line
+}
+
+@mixin center-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin out($color: '#80bdff') {
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($color, 0.5);
+  }
+}
+
+@mixin placeholder($fontFamily, $fontSize, $fontWeight, $color) {
+
+  &::-webkit-input-placeholder {
+    font-size: $fontSize;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    line-height: $fontSize + 4;
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-moz-input-placeholder {
+    font-size: $fontSize;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    line-height: $fontSize + 4;
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    font-size: $fontSize;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    line-height: $fontSize + 4;
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    font-size: $fontSize;
+    font-family: $fontFamily, sans-serif;
+    font-weight: $fontWeight;
+    line-height: $fontSize + 4;
+    color: $color;
+    opacity: 1;
+  }
+}
+
