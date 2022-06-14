@@ -26,7 +26,6 @@ function TestPage() {
             <li>
               {/* <StaticImage placeholder="blurred" src="../assets/img/icon.png" alt="test" /> */}
             </li>
-            <li>{/* <Icon className="svg-icon" style={{ width: '30px' }} /> */}</li>
             <li>
               <SvgSpriteIcon id="telegram" />
             </li>
