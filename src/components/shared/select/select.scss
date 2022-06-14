@@ -1,0 +1,33 @@
+@import 'src/assets/styles/mixins';
+
+.select {
+  display: flex;
+
+  &__content {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      margin: auto;
+      border-color: #000 transparent transparent transparent; //stylelint-disable-line
+      border-style: solid;
+      border-width: 6px 5px 0 5px; //stylelint-disable-line
+      pointer-events: none;
+    }
+  }
+
+  &__item {
+    @include out(#80bdff);
+    border-radius: 5px;
+    padding: 2px 30px 2px 10px;
+    background-color: #f8f8f8; //stylelint-disable-line
+    cursor: pointer;
+    appearance: none;
+  }
+}

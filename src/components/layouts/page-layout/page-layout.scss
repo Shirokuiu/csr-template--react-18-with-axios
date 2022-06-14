@@ -1,0 +1,24 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__content {
+    flex: 1 0 auto;
+  }
+
+  &__footer-wrap {
+    flex: 0 0 auto;
+  }
+
+  &__svg-sprite {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+}

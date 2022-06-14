@@ -1,16 +1,19 @@
+import { StrictMode } from 'react';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import { createRoot } from 'react-dom/client';
-import { StrictMode } from 'react';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-import 'src/assets/styles/index.scss';
 import App from 'src/app/App';
+import { createAPI } from 'src/services/api';
 import { store } from 'src/store';
+import 'src/assets/styles/index.scss';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
+
+export const api = createAPI();
 
 root.render(
   <StrictMode>
