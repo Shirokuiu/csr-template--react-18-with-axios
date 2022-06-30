@@ -24,9 +24,6 @@ function TestPage() {
               <ExampleTriggerModal />
             </li>
             <li>
-              {/* <StaticImage placeholder="blurred" src="../assets/img/icon.png" alt="test" /> */}
-            </li>
-            <li>
               <SvgSpriteIcon id="telegram" />
             </li>
             <li>
