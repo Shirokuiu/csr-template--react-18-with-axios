@@ -1,11 +1,12 @@
-export type SelectProps = {
+import { PropsWithCssClassName } from 'src/type/shared';
+
+export type SelectProps = PropsWithCssClassName<{
   id?: string;
   value?: string;
   name?: string;
   options?: Option[];
-  className?: string;
   onChange?: (evt: EvtSelect) => void;
-};
+}>;
 
 export type Option = {
   key: number;

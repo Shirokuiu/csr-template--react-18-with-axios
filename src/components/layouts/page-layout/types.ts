@@ -1,6 +1,9 @@
 import { PropsWithChildren } from 'react';
 
-export type PageLayoutProps = PropsWithChildren<{
-  className?: string;
-  renderFooter?: () => JSX.Element | null;
-}>;
+import { PropsWithCssClassName } from 'src/type/shared';
+
+export type PageLayoutProps = PropsWithChildren<
+  PropsWithCssClassName<{
+    renderFooter?: () => JSX.Element | null;
+  }>
+>;

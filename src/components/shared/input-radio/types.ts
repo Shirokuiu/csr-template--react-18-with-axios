@@ -1,14 +1,15 @@
 import { ReactNode } from 'react';
 
-export type InputRadioProps = {
+import { PropsWithCssClassName } from 'src/type/shared';
+
+export type InputRadioProps = PropsWithCssClassName<{
   id?: string;
   name?: string;
   value?: string;
   checkedValue?: string;
-  className?: string;
   onRadioChange?: (evt: EvtRadio) => void;
   children?: ReactNode;
-};
+}>;
 
 export type RadioInput = {
   key: number;

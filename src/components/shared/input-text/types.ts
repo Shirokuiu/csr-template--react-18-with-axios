@@ -1,11 +1,12 @@
-export type InputTextProps = {
+import { PropsWithCssClassName } from 'src/type/shared';
+
+export type InputTextProps = PropsWithCssClassName<{
   id?: string;
   name?: string;
   value?: string;
   placeholder?: string;
-  className?: string;
   onChange?: (evt: EvtInputText) => void;
-};
+}>;
 
 export type EvtInputText = {
   target: {
