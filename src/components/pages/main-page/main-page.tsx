@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import CenterLayout from 'src/components/layouts/center-layout/center-layout';
 import PageLayout from 'src/components/layouts/page-layout/page-layout';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
-import { clearState } from 'src/store/main-page-process/reducer/main-page-process';
+import { clearState } from 'src/store/main-page-process/main-page-process';
 import { getTitle } from 'src/store/main-page-process/selectors';
 
 function MainPage() {
