@@ -3,37 +3,31 @@ import { Link } from 'react-router-dom';
 
 import CenterLayout from 'src/components/layouts/center-layout/center-layout';
 import PageLayout from 'src/components/layouts/page-layout/page-layout';
-import { useAppDispatch, useAppSelector } from 'src/hooks';
-import { clearState } from 'src/store/main-page-process/main-page-process';
-import { getTitle } from 'src/store/main-page-process/selectors';
 
 function MainPage() {
-  const title = useAppSelector(getTitle);
-  const dispatch = useAppDispatch();
-
-  const handleButtonClick = () => {
-    dispatch(clearState());
-  };
-
   return (
     <HelmetProvider>
-      <PageLayout renderFooter={() => <h2>Hello from footer content</h2>}>
+      <PageLayout
+        renderFooter={() => (
+          <CenterLayout>
+            <h2>Контент футера</h2>
+          </CenterLayout>
+        )}
+      >
         <Helmet>
-          <title>Index page</title>
+          <title>Руководство</title>
         </Helmet>
         <CenterLayout>
+          <h1>Руководство</h1>
           <ul>
             <li>
-              <h1>Hello</h1>
+              <Link to="test-page">Пример с формой и модалкой</Link>
             </li>
             <li>
-              <Link to="test-page">Test page</Link>
+              <Link to="redux-example-page">Пример с redux</Link>
             </li>
-            <li>{title}</li>
             <li>
-              <button type="button" onClick={handleButtonClick}>
-                Reset state
-              </button>
+              <Link to="fonts-example-page">Пример с шрифтами</Link>
             </li>
           </ul>
         </CenterLayout>
