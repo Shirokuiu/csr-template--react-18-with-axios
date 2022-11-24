@@ -95,3 +95,23 @@
   }
 }
 
+@mixin tp-14-16-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+@mixin tp-19-23-400 {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+@mixin color-gray-8 {
+  color: var(--gray-8);
+}
+
+@mixin color-gray-9 {
+  color: var(--gray-9);
+}
+

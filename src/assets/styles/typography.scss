@@ -1,4 +1,4 @@
-@import 'src/assets/styles/variables';
+@import "mixins";
 
 /* roboto-regular - latin_cyrillic */
 @font-face {
@@ -24,49 +24,83 @@
   url('../fonts/roboto-v30-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
+// Предустановленные стили для типографики.
+// Цель - сокращение написания кода
+// Применение - там, где есть доступ к HTML классам, просто добавляем класс типографики
+// (<div className="tp-18-24-500-italic block__name"></div>)
+// Там, где доступа к HTML классам нет, пишем названия миксина (@include tp-18-24-500-italic)
+// Формула написания - tp-${font-size}-${line-height}-${font-weight}-${?font-style}
+// (?font-style плавающий, если font-style: normal, его значение в конце не пишется)
+// Данную конструкцию лучше всего привязать к токенам в фигме, чтобы удобнее было работать со шрифтами
+// Пример - tp-18-24-500-italic
+//{
+//  font-size: 18px;
+//  font-style: italic;
+//  font-weight: 500;
+//  line-height: 24px;
+//}
+
+.tp-14-16-400 {
+  @include tp-14-16-400;
+}
+
+.tp-19-23-400 {
+  @include tp-19-23-400;
+}
+
+// Предустановленные стили для цвета шрифта
+// Цель - сокращение написания кода
+// Применение - там, где есть доступ к HTML классам, просто добавляем класс цвета шрифта
+// (<div className="color-gray-8 block__name"></div>)
+// Там, где доступа к HTML классам нет, пишем названия миксина (@include color-gray-8)
+// Формула написания - color-${css-custom-property}
+// Данную конструкцию лучше всего привязать к токенам в фигме, чтобы удобнее было работать с цветами шрифта
+// Пример - color-gray-8
+//{
+//  color: var(--gray-8);
+//}
+
+.color-gray-8 {
+  @include color-gray-8;
+}
+
+.color-gray-9 {
+  @include color-gray-9;
+}
+
 body {
-  font-size: 14px;
+  @include tp-14-16-400;
+  @include color-gray-9;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   font-style: normal;
-  line-height: 16px;
-  color: var(--gray-9);
 }
 
 *::-webkit-input-placeholder {
-  font-size: 19px;
+  @include tp-19-23-400;
+  @include color-gray-9;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  line-height: 23px;
-  color: var(--gray-9);
   opacity: 1;
 }
 
 *:-moz-input-placeholder {
-  font-size: 19px;
+  @include tp-19-23-400;
+  @include color-gray-9;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  line-height: 23px;
-  color: var(--gray-9);
   opacity: 1;
 
 }
 
 *::-moz-placeholder {
-  font-size: 19px;
+  @include tp-19-23-400;
+  @include color-gray-9;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  line-height: 23px;
-  color: var(--gray-9);
   opacity: 1;
 }
 
 *:-ms-input-placeholder {
-  font-size: 19px;
+  @include tp-19-23-400;
+  @include color-gray-9;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  line-height: 23px;
-  color: var(--gray-9);
   opacity: 1;
 }
 
