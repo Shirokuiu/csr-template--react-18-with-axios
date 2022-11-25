@@ -6,17 +6,17 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from 'src/app/App';
-import { api } from 'src/index';
-import { NameSpace } from 'src/store/constants';
+import { api } from 'src/services/api';
+import { SliceNameSpace } from 'src/store/constants';
 
 describe('Проверка компонента App', () => {
   const middlewares = [thunk.withExtraArgument(api)];
   const mockStore = configureMockStore(middlewares);
 
   describe('Проверка отрисовки', () => {
-    it('Компонент корректно отрисоывается', () => {
+    it('Компонент корректно отрисовывается', () => {
       const store = mockStore({
-        [NameSpace.MainPage]: {
+        [SliceNameSpace.MainPage]: {
           title: 'Hello',
         },
       });

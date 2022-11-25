@@ -29,6 +29,9 @@ function MainPage() {
             <li>
               <Link to="fonts-example-page">Пример с шрифтами</Link>
             </li>
+            <li>
+              <Link to="data-fetch-by-rtk-query-example-page">Пример работы с api (rtk-query)</Link>
+            </li>
           </ul>
         </CenterLayout>
       </PageLayout>

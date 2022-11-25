@@ -8,13 +8,10 @@ import { BrowserRouter } from 'react-router-dom';
 import 'src/assets/styles/index.scss';
 
 import App from 'src/app/App';
-import { createAPI } from 'src/services/api';
 import { store } from 'src/store';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
-
-export const api = createAPI();
 
 root.render(
   <StrictMode>

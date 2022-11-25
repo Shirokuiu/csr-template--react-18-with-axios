@@ -1,8 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import { NameSpace } from 'src/store/constants';
+import { api } from 'src/services/api';
+import { SliceNameSpace } from 'src/store/constants';
 import { mainPageSlice } from 'src/store/slices/main-page-slice/main-page-slice';
 
 export const rootReducer = combineReducers({
-  [NameSpace.MainPage]: mainPageSlice.reducer,
+  [api.reducerPath]: api.reducer,
+  [SliceNameSpace.MainPage]: mainPageSlice.reducer,
 });

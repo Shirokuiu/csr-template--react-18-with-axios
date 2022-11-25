@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { NameSpace } from 'src/store/constants';
+import { SliceNameSpace } from 'src/store/constants';
 import { MainPageSliceInitialState } from 'src/store/slices/main-page-slice/types';
 
 const initialState: MainPageSliceInitialState = {
@@ -8,7 +8,7 @@ const initialState: MainPageSliceInitialState = {
 };
 
 export const mainPageSlice = createSlice({
-  name: NameSpace.MainPage,
+  name: SliceNameSpace.MainPage,
   initialState,
   reducers: {
     clearState(state) {

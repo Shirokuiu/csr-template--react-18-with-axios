@@ -1,3 +1,3 @@
-export enum NameSpace {
+export enum SliceNameSpace {
   MainPage = 'MAIN_PAGE',
 }

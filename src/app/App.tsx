@@ -11,6 +11,12 @@ const ReduxExamplePage = lazy(
 const FontsExamplePage = lazy(
   () => import('src/components/pages/fonts-example-page/fonts-example-page'),
 );
+const DataFetchByRtkQueryExamplePage = lazy(
+  () =>
+    import(
+      'src/components/pages/data-fetch-by-rtk-query-example-page/data-fetch-by-rtk-query-example-page'
+    ),
+);
 
 function App() {
   return (
@@ -39,6 +45,14 @@ function App() {
             element={
               <Suspense fallback={<>...</>}>
                 <FontsExamplePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="data-fetch-by-rtk-query-example-page"
+            element={
+              <Suspense fallback={<>...</>}>
+                <DataFetchByRtkQueryExamplePage />
               </Suspense>
             }
           />
