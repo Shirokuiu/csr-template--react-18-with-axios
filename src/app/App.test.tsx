@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from 'src/app/App';
 import { api } from 'src/index';
-import { NameSpace } from 'src/store/constants';
+import { SliceNameSpace } from 'src/store/constants';
 
 describe('Проверка компонента App', () => {
   const middlewares = [thunk.withExtraArgument(api)];
@@ -16,7 +16,7 @@ describe('Проверка компонента App', () => {
   describe('Проверка отрисовки', () => {
     it('Компонент корректно отрисоывается', () => {
       const store = mockStore({
-        [NameSpace.MainPage]: {
+        [SliceNameSpace.MainPage]: {
           title: 'Hello',
         },
       });
