@@ -60,31 +60,31 @@
 //  color: var(--gray-8);
 //}
 
-.color-gray-8 {
-  @include color-gray-8;
+.tp-color-gray-8 {
+  @include tp-color-gray-8;
 }
 
-.color-gray-9 {
-  @include color-gray-9;
+.tp-color-gray-9 {
+  @include tp-color-gray-9;
 }
 
 body {
   @include tp-14-16-400;
-  @include color-gray-9;
+  @include tp-color-gray-9;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
 }
 
 *::-webkit-input-placeholder {
   @include tp-19-23-400;
-  @include color-gray-9;
+  @include tp-color-gray-9;
   font-family: 'Roboto', sans-serif;
   opacity: 1;
 }
 
 *:-moz-input-placeholder {
   @include tp-19-23-400;
-  @include color-gray-9;
+  @include tp-color-gray-9;
   font-family: 'Roboto', sans-serif;
   opacity: 1;
 
@@ -92,14 +92,14 @@ body {
 
 *::-moz-placeholder {
   @include tp-19-23-400;
-  @include color-gray-9;
+  @include tp-color-gray-9;
   font-family: 'Roboto', sans-serif;
   opacity: 1;
 }
 
 *:-ms-input-placeholder {
   @include tp-19-23-400;
-  @include color-gray-9;
+  @include tp-color-gray-9;
   font-family: 'Roboto', sans-serif;
   opacity: 1;
 }

@@ -12,8 +12,8 @@ function FontsExamplePage() {
           <title>Пример со шрифтами</title>
         </Helmet>
         <CenterLayout>
-          <p className="tp-19-23-400 color-gray-8">Шрифт</p>
-          <p className="tp-14-16-400 color-gray-9">Шрифт</p>
+          <p className="tp-19-23-400 tp-color-gray-8">Шрифт</p>
+          <p className="tp-14-16-400 tp-color-gray-9">Шрифт</p>
           <Link to="/">На главную</Link>
         </CenterLayout>
       </PageLayout>
