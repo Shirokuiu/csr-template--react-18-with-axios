@@ -24,10 +24,17 @@
   url('../fonts/roboto-v30-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
+body {
+  @include tp-14-16-400;
+  @include tp-color-gray-9;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
 // Предустановленные стили для типографики.
 // Цель - сокращение написания кода
 // Применение - там, где есть доступ к HTML классам, просто добавляем класс типографики
-// (<div className="tp-18-24-500-italic block__name"></div>)
+// (<p className="tp-18-24-500-italic block__name"></p>)
 // Там, где доступа к HTML классам нет, пишем названия миксина (@include tp-18-24-500-italic)
 // Формула написания - tp-${font-size}-${line-height}-${font-weight}-${?font-style}
 // (?font-style плавающий, если font-style: normal, его значение в конце не пишется)
@@ -51,11 +58,11 @@
 // Предустановленные стили для цвета шрифта
 // Цель - сокращение написания кода
 // Применение - там, где есть доступ к HTML классам, просто добавляем класс цвета шрифта
-// (<div className="color-gray-8 block__name"></div>)
-// Там, где доступа к HTML классам нет, пишем названия миксина (@include color-gray-8)
-// Формула написания - color-${css-custom-property}
+// (<p className="tp-color-gray-8 block__name"></p>)
+// Там, где доступа к HTML классам нет, пишем названия миксина (@include tp-color-gray-8)
+// Формула написания - tp-color-${css-custom-property}
 // Данную конструкцию лучше всего привязать к токенам в фигме, чтобы удобнее было работать с цветами шрифта
-// Пример - color-gray-8
+// Пример - tp-color-gray-8
 //{
 //  color: var(--gray-8);
 //}
@@ -66,13 +73,6 @@
 
 .tp-color-gray-9 {
   @include tp-color-gray-9;
-}
-
-body {
-  @include tp-14-16-400;
-  @include tp-color-gray-9;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
 }
 
 *::-webkit-input-placeholder {

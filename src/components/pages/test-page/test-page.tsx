@@ -7,6 +7,7 @@ import ExampleTriggerModal from 'src/components/containers/example-trigger-modal
 import TestModal from 'src/components/containers/test-modal/test-modal';
 import PageLayout from 'src/components/layouts/page-layout/page-layout';
 import SvgSpriteIcon from 'src/components/shared/svg-sprite-icon/svg-sprite-icon';
+import { SvgSpriteIconId } from 'src/components/shared/svg-sprite-icon/types';
 
 function TestPage() {
   return (
@@ -24,13 +25,13 @@ function TestPage() {
               <ExampleTriggerModal />
             </li>
             <li>
-              <SvgSpriteIcon id="telegram" />
+              <SvgSpriteIcon id={SvgSpriteIconId.Telegram} />
             </li>
             <li>
-              <SvgSpriteIcon id="phone-call" />
+              <SvgSpriteIcon id={SvgSpriteIconId.PhoneCall} />
             </li>
             <li>
-              <SvgSpriteIcon id="shopping-cart" />
+              <SvgSpriteIcon id={SvgSpriteIconId.ShoppingCart} />
             </li>
             <li>
               <ExampleForm />
