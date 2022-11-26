@@ -24,6 +24,13 @@
   url('../fonts/roboto-v30-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
 }
 
+body {
+  @include tp-14-16-400;
+  @include tp-color-gray-9;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
 // Предустановленные стили для типографики.
 // Цель - сокращение написания кода
 // Применение - там, где есть доступ к HTML классам, просто добавляем класс типографики
@@ -66,13 +73,6 @@
 
 .tp-color-gray-9 {
   @include tp-color-gray-9;
-}
-
-body {
-  @include tp-14-16-400;
-  @include tp-color-gray-9;
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
 }
 
 *::-webkit-input-placeholder {
