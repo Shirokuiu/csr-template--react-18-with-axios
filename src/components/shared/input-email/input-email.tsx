@@ -1,5 +1,5 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-
+import AppInput from 'src/components/shared/app-input/app-input';
+import { AppInputTypes } from 'src/components/shared/app-input/types';
 import { InputEmailProps } from 'src/components/shared/input-email/types';
 
 function InputEmail({
@@ -10,26 +10,15 @@ function InputEmail({
   className = '',
   onChange = () => undefined,
 }: InputEmailProps) {
-  const [inputValue, setInputValue] = useState<string>(value);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
-  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(evt.target.value);
-    onChange({ target: { name, value: evt.target.value } });
-  };
-
   return (
-    <input
-      type="email"
+    <AppInput
       id={id}
+      type={AppInputTypes.Email}
+      value={value}
       name={name}
-      value={inputValue}
       placeholder={placeholder}
-      onChange={handleInputChange}
-      className={`input-text ${className}`.trim()}
+      className={`input-email ${className}`.trim()}
+      onChange={onChange}
     />
   );
 }

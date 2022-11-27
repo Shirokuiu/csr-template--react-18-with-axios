@@ -1,4 +1,4 @@
-import { Checkbox } from 'src/components/shared/input-checkbox/types';
+import { InputCheckbox } from 'src/components/shared/input-checkbox/types';
 
 const getValues = (enumValue: Record<string, string>): string[] => Object.values(enumValue);
 
@@ -6,7 +6,7 @@ export const makeCheckboxes = (
   enumValue: Record<string, string>,
   name: string,
   labelMap: Record<string, string>,
-): Checkbox[] => {
+): InputCheckbox[] => {
   const values = getValues(enumValue);
 
   return values.map((type, idx) => ({

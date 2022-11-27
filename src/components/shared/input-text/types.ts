@@ -1,3 +1,4 @@
+import { AppInputEvt } from 'src/components/shared/app-input/types';
 import { PropsWithCssClassName } from 'src/type/shared';
 
 export type InputTextProps = PropsWithCssClassName<{
@@ -5,12 +6,5 @@ export type InputTextProps = PropsWithCssClassName<{
   name?: string;
   value?: string;
   placeholder?: string;
-  onChange?: (evt: EvtInputText) => void;
+  onChange?: (evt: AppInputEvt) => void;
 }>;
-
-export type EvtInputText = {
-  target: {
-    name: string;
-    value: string;
-  };
-};
