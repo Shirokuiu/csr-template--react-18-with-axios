@@ -1,10 +1,10 @@
-import { Checkbox } from 'src/components/shared/input-checkbox/types';
+import { InputCheckbox } from 'src/components/shared/input-checkbox/types';
 
 export const changeCheckboxChecked = (
-  checboxes: Checkbox[],
+  checboxes: InputCheckbox[],
   checkboxValues: string[],
-): Checkbox[] =>
-  checboxes.map((checkbox: Checkbox) => ({
+): InputCheckbox[] =>
+  checboxes.map((checkbox: InputCheckbox) => ({
     ...checkbox,
     isChecked: checkboxValues.includes(checkbox.value ?? ''),
   }));

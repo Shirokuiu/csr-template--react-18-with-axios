@@ -1,5 +1,5 @@
-import React from 'react';
-
+import AppInput from 'src/components/shared/app-input/app-input';
+import { AppInputTypes } from 'src/components/shared/app-input/types';
 import { InputRadioProps } from 'src/components/shared/input-radio/types';
 
 function InputRadio({
@@ -11,19 +11,15 @@ function InputRadio({
   className = '',
   onRadioChange = () => undefined,
 }: InputRadioProps) {
-  const handleChange = () => {
-    onRadioChange({ target: { name, value } });
-  };
-
   return (
-    <label className={`input-radio ${className}`.trim()}>
-      <input
-        type="radio"
-        name={name}
-        value={value}
+    <label htmlFor={id} className={`input-radio ${className}`.trim()}>
+      <AppInput
         id={id}
-        onChange={handleChange}
+        type={AppInputTypes.Radio}
+        value={value}
+        name={name}
         defaultChecked={checkedValue === value}
+        onChange={onRadioChange}
         className="input-radio__input"
       />
       <span className="input-radio__icon" />

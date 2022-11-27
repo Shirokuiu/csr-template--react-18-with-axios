@@ -21,13 +21,16 @@ function MainPage() {
           <h1>Руководство</h1>
           <ul>
             <li>
-              <Link to="test-page">Пример с формой и модалкой</Link>
+              <Link to="form-modal-svg-icons-example">Пример с формой и модалкой</Link>
             </li>
             <li>
               <Link to="redux-example-page">Пример с redux</Link>
             </li>
             <li>
               <Link to="fonts-example-page">Пример с шрифтами</Link>
+            </li>
+            <li>
+              <Link to="data-fetch-by-rtk-query-example-page">Пример работы с api (rtk-query)</Link>
             </li>
           </ul>
         </CenterLayout>

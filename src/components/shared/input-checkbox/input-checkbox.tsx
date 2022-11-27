@@ -8,6 +8,7 @@ function InputCheckbox({
   value = 'checkbox',
   id = 'checkbox',
   isChecked = false,
+  className = '',
   onChange = () => undefined,
 }: InputCheckboxProps) {
   const [checked, setChecked] = useState<boolean>(false);
@@ -28,15 +29,15 @@ function InputCheckbox({
   };
 
   return (
-    <label>
+    <label className={`input-checkbox ${className}`}>
       <input
-        className="visually-hidden"
-        type="checkbox"
-        name={name}
-        value={value}
         id={id}
+        type="checkbox"
+        value={value}
+        name={name}
         checked={checked}
         onChange={handleChange}
+        className="visually-hidden"
       />
       <span>{children}</span>
     </label>
