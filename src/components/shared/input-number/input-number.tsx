@@ -1,5 +1,5 @@
-import React, { ChangeEvent, FocusEvent, KeyboardEvent, useEffect, useState } from 'react';
-
+import AppInput from 'src/components/shared/app-input/app-input';
+import { AppInputTypes } from 'src/components/shared/app-input/types';
 import { InputNumberProps } from 'src/components/shared/input-number/types';
 
 function InputNumber({
@@ -13,44 +13,18 @@ function InputNumber({
   onBlur = () => undefined,
   onKeyDownEnter = () => undefined,
 }: InputNumberProps) {
-  const [inputValue, setInputValue] = useState<number | string>(value);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
-  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(evt.target.value);
-    onChange({ target: { name, value: +evt.target.value } });
-  };
-
-  const handleInputBlur = () => {
-    onBlur({ target: { name, value: inputValue } });
-  };
-
-  const handleInputKeyDown = (evt: KeyboardEvent<HTMLInputElement>) => {
-    if (evt.key === 'Enter') {
-      onKeyDownEnter({ target: { name, value: inputValue } });
-    }
-  };
-
-  const handleInputFocus = (evt: FocusEvent<HTMLInputElement>) => {
-    evt.target.select();
-  };
-
   return (
-    <input
-      type="number"
+    <AppInput
       id={id}
-      name={name}
+      type={AppInputTypes.Number}
+      value={value}
       min={min}
-      value={inputValue}
+      name={name}
       placeholder={placeholder}
-      onFocus={handleInputFocus}
-      onBlur={handleInputBlur}
-      onChange={handleInputChange}
-      onKeyDown={handleInputKeyDown}
-      className={`input-number ${className}`.trim()}
+      onChange={onChange}
+      onBlur={onBlur}
+      onKeyDownEnter={onKeyDownEnter}
+      className={`input-text ${className}`.trim()}
     />
   );
 }

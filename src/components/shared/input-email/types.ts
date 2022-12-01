@@ -1,3 +1,4 @@
+import { AppInputEvt } from 'src/components/shared/app-input/types';
 import { PropsWithCssClassName } from 'src/type/shared';
 
 export type InputEmailProps = PropsWithCssClassName<{
@@ -5,12 +6,5 @@ export type InputEmailProps = PropsWithCssClassName<{
   name?: string;
   value?: string;
   placeholder?: string;
-  onChange?: (evt: EvtInputEmail) => void;
+  onChange?: (evt: AppInputEvt) => void;
 }>;
-
-export type EvtInputEmail = {
-  target: {
-    name: string;
-    value: string;
-  };
-};

@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 
+import { AppInputEvt } from 'src/components/shared/app-input/types';
 import { PropsWithCssClassName } from 'src/type/shared';
 
 export type InputRadioProps = PropsWithCssClassName<{
@@ -7,7 +8,7 @@ export type InputRadioProps = PropsWithCssClassName<{
   name?: string;
   value?: string;
   checkedValue?: string;
-  onRadioChange?: (evt: EvtRadio) => void;
+  onRadioChange?: (evt: AppInputEvt) => void;
   children?: ReactNode;
 }>;
 
@@ -18,11 +19,4 @@ export type RadioInput = {
   name: string;
   label: string;
   checkedValue: string;
-};
-
-export type EvtRadio = {
-  target: {
-    name: string;
-    value: string;
-  };
 };

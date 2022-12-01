@@ -14,7 +14,7 @@ describe('Проверка компонента App', () => {
   const mockStore = configureMockStore(middlewares);
 
   describe('Проверка отрисовки', () => {
-    it('Компонент корректно отрисоывается', () => {
+    it('Компонент корректно отрисовывается', () => {
       const store = mockStore({
         [SliceNameSpace.MainPage]: {
           title: 'Hello',

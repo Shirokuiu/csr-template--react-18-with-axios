@@ -3,8 +3,11 @@ import { Route, Routes } from 'react-router-dom';
 
 import MainPage from 'src/components/pages/main-page/main-page';
 import WrappedSvgSprite from 'src/hocks/wrapped-svg-sprite/wrapped-svg-sprite';
+import { PageRoutes } from 'src/constants/routes';
 
-const TestPage = lazy(() => import('src/components/pages/test-page/test-page'));
+const FormModalSvgIconsExample = lazy(
+  () => import('src/components/pages/form-modal-svg-icons-example/form-modal-svg-icons-example'),
+);
 const ReduxExamplePage = lazy(
   () => import('src/components/pages/redux-example-page/redux-example-page'),
 );
@@ -16,18 +19,18 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/">
+        <Route path={PageRoutes.Index}>
           <Route index element={<MainPage />} />
           <Route
-            path="test-page"
+            path={PageRoutes.FormModalSvgIconsExample}
             element={
               <Suspense fallback={<>...</>}>
-                <TestPage />
+                <FormModalSvgIconsExample />
               </Suspense>
             }
           />
           <Route
-            path="redux-example-page"
+            path={PageRoutes.ReduxExamplePage}
             element={
               <Suspense fallback={<>...</>}>
                 <ReduxExamplePage />
@@ -35,7 +38,7 @@ function App() {
             }
           />
           <Route
-            path="fonts-example-page"
+            path={PageRoutes.FontsExamplePage}
             element={
               <Suspense fallback={<>...</>}>
                 <FontsExamplePage />

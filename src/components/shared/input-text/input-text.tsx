@@ -1,5 +1,5 @@
-import React, { ChangeEvent, useEffect, useState } from 'react';
-
+import AppInput from 'src/components/shared/app-input/app-input';
+import { AppInputTypes } from 'src/components/shared/app-input/types';
 import { InputTextProps } from 'src/components/shared/input-text/types';
 
 function InputText({
@@ -10,26 +10,15 @@ function InputText({
   className = '',
   onChange = () => undefined,
 }: InputTextProps) {
-  const [inputValue, setInputValue] = useState<string>(value);
-
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
-
-  const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(evt.target.value);
-    onChange({ target: { name, value: evt.target.value } });
-  };
-
   return (
-    <input
-      type="text"
+    <AppInput
       id={id}
+      type={AppInputTypes.Text}
+      value={value}
       name={name}
-      value={inputValue}
       placeholder={placeholder}
-      onChange={handleInputChange}
       className={`input-text ${className}`.trim()}
+      onChange={onChange}
     />
   );
 }
