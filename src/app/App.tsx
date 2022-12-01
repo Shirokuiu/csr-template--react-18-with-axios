@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import MainPage from 'src/components/pages/main-page/main-page';
-import SvgSprite from 'src/components/shared/svg-sprite/svg-sprite';
+import WrappedSvgSprite from 'src/hocks/wrapped-svg-sprite/wrapped-svg-sprite';
 
 const TestPage = lazy(() => import('src/components/pages/test-page/test-page'));
 const ReduxExamplePage = lazy(
@@ -44,7 +44,7 @@ function App() {
           />
         </Route>
       </Routes>
-      <SvgSprite />
+      <WrappedSvgSprite />
     </>
   );
 }
